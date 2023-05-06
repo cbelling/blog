@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/Header';
 
 
 function App() {
@@ -9,21 +10,10 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto px-2 py-12 flex flex-col min-h-screen">
-      <header className="flex items-center justify-between mb-10">
-        <p className="text-xl font-bold text-center">Austin Bellinger</p>
-        <nav className="text-lg">
-          <a href="/" className="mx-3">Home</a>
-          <a href="/" className="mx-3">About Me</a>
-          <a href="/articles" className="mx-3">Articles</a>
-          <a href="/articles" className="mx-3">Books</a>
-        </nav>
-        <button className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded">
-          Subscribe
-        </button>
-      </header>
-      {/* Rest of the content */}
-      <main className="flex-grow">
+    <div className="container mx-auto py-12 flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow mx-2">
+      <div className="bg-green-100 p-8">
       <h1 className="text-4xl font-bold text-center mb-10">Hi! Welcome to my blog</h1>
       <div className="text-center">
         <p className="mb-6">Interested in getting a newsletter? Fill out the form below.</p>
@@ -43,6 +33,7 @@ function App() {
             Subscribe
           </button>
         </form>
+      </div>
       </div>
       <hr className="section-divider mx-auto my-16 w-full max-w-4xl" />
       <div className="mt-16">
