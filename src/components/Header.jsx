@@ -27,16 +27,17 @@ const Header = () => {
       <a href="/articles" className="mx-3">
         Articles
       </a>
-      <a href="/books" className="mx-3">
-        Books
+      <a href="/projects" className="mx-3">
+        Projects
       </a>
     </>
   );
 
   return (
     <header className="flex items-center justify-between mb-10 px-4">
-    <p className="text-xl font-bold text-center">Austin Bellinger</p>
-    <div className="relative md:hidden" style={{ marginLeft: 'auto' }}>
+  <p className="text-xl font-bold text-center">Austin Bellinger</p>
+  <div>
+    <div className="md:hidden">
       <button
         onClick={toggleMenu}
         className="text-xl bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded relative z-10"
@@ -51,20 +52,15 @@ const Header = () => {
       >
         {renderNavLinks()}
       </nav>
-
-
-
-      </div>
-      <nav className="hidden md:flex md:items-center md:justify-between md:w-auto">
+    </div>
+    <nav className="hidden md:flex md:items-center md:justify-center md:w-auto">
+      <div className="flex justify-center items-center">
         {renderNavLinks()}
-      </nav>
-      <button
-        className="hidden md:block bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
-        style={{ marginLeft: 'auto' }}
-      >
-        Subscribe
-      </button>
-    </header>
+      </div>
+    </nav>
+  </div>
+
+</header>
   );
 };
 

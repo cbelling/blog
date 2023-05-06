@@ -1,5 +1,4 @@
 import articles from '../content/articles.json';
-import books from '../content/books.json';
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -13,9 +12,9 @@ function Home() {
     <div className="container mx-auto py-12 flex flex-col min-h-screen">
       <main className="flex-grow">
       <div className="bg-green-100 p-8">
-      <h1 className="text-4xl font-bold text-center mb-10">Hi! Welcome to my blog</h1>
+      <h1 className="text-4xl font-bold text-center mb-10">Hi! Welcome to my site.</h1>
       <div className="text-center">
-        <p className="mb-6">Interested in getting a newsletter? Fill out the form below.</p>
+        <p className="mb-6">Interested in getting notified? Fill out the form below.</p>
         <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
           <input
             type="email"
@@ -43,23 +42,20 @@ function Home() {
       </div>
       <hr className="section-divider mx-auto my-16 w-full max-w-4xl" />
       <div className="mt-16">
-        <p className="text-2xl font-semibold text-center mb-10">Read my articles below.</p>
-        {books.map((book) => (
-        <div key={book.id}>
-          <Link to={`/book/${book.id}`}>{book.title}</Link>
-          <p>{book.description}</p>
-        </div>
-      ))}
-      </div>
-      <hr className="section-divider mx-auto my-16 w-full max-w-4xl" />
-      <div className="mt-16">
-        <p className="text-2xl font-semibold text-center mb-10">Books</p>
+        <p className="text-2xl font-semibold text-center mb-10">Articles</p>
         {articles.map((article) => (
         <div key={article.id}>
           <Link to={`/article/${article.id}`}>{article.title}</Link>
           <p>{article.description}</p>
         </div>
       ))}
+      </div>
+      <hr className="section-divider mx-auto my-16 w-full max-w-4xl" />
+      <div className="mt-16">
+        <p className="text-2xl font-semibold text-center mb-10">Projects</p>
+        <div className="mt-5">
+          <p>Article Description</p>
+        </div>
       </div>
       </main>
     </div>
