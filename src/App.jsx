@@ -3,7 +3,13 @@ import './App.css'
 function App() {
 
   return (
-    <p>hi</p>
+    <div>
+      <h1 className="text-3xl font-bold">Austin Bellinger</h1>
+      <p>Welcome to my blog</p>
+      <div>
+      <p>hi</p>
+      </div>
+    </div>
   )
 }
 
