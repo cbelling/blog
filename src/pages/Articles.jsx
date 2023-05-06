@@ -6,7 +6,7 @@ const Article = () => {
   return (
     <div>
       {articles.map((article) => (
-        <div key={article.id}>
+        <div key={article.id} className="mb-8">
           <Link to={`/article/${article.id}`}>{article.title}</Link>
           <p>{article.description}</p>
         </div>
