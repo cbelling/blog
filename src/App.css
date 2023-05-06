@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.section-divider {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+  }
+  
