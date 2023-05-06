@@ -8,6 +8,23 @@ const Header = () => {
     setShowMenu(!showMenu);
   };
 
+  const renderNavLinks = () => (
+    <>
+      <a href="/" className="mx-3">
+        Home
+      </a>
+      <a href="/about-me" className="mx-3">
+        About Me
+      </a>
+      <a href="/articles" className="mx-3">
+        Articles
+      </a>
+      <a href="/books" className="mx-3">
+        Books
+      </a>
+    </>
+  );
+
   return (
     <header className="flex items-center justify-between mb-10 px-4">
       <p className="text-xl font-bold text-center">Austin Bellinger</p>
@@ -23,33 +40,11 @@ const Header = () => {
             showMenu ? 'block' : 'hidden'
           }`}
         >
-          <a href="/" className="mx-3 py-2 border-t border-gray-200">
-            Home
-          </a>
-          <a href="/" className="mx-3 py-2 border-t border-gray-200">
-            About Me
-          </a>
-          <a href="/articles" className="mx-3 py-2 border-t border-gray-200">
-            Articles
-          </a>
-          <a href="/books" className="mx-3 py-2 border-t border-gray-200">
-            Books
-          </a>
+          {renderNavLinks()}
         </nav>
       </div>
       <nav className="hidden md:flex md:items-center md:justify-between md:w-auto">
-        <a href="/" className="mx-3">
-          Home
-        </a>
-        <a href="/" className="mx-3">
-          About Me
-        </a>
-        <a href="/articles" className="mx-3">
-          Articles
-        </a>
-        <a href="/books" className="mx-3">
-          Books
-        </a>
+        {renderNavLinks()}
       </nav>
       <button
         className="hidden md:block bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
