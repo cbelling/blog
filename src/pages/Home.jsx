@@ -1,4 +1,5 @@
 import articles from '../content/articles.json';
+import books from '../content/books.json';
 import { Link } from 'react-router-dom';
 
 function Home() {
@@ -43,10 +44,10 @@ function Home() {
       <hr className="section-divider mx-auto my-16 w-full max-w-4xl" />
       <div className="mt-16">
         <p className="text-2xl font-semibold text-center mb-10">Read my articles below.</p>
-        {articles.map((article) => (
-        <div key={article.id}>
-          <Link to={`/article/${article.id}`}>{article.title}</Link>
-          <p>{article.description}</p>
+        {books.map((book) => (
+        <div key={book.id}>
+          <Link to={`/book/${book.id}`}>{book.title}</Link>
+          <p>{book.description}</p>
         </div>
       ))}
       </div>
